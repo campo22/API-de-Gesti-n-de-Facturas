@@ -68,6 +68,59 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+            <!-- Dependencia para trabajar con JSON Web Tokens (JWT) -->
+            <!-- Permite la creación, firma, verificación y decodificación de JWT en Java -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>0.9.1</version>
+            </dependency>
+
+            <!-- Dependencia para manejar JSON en Android y Java -->
+            <!-- Proporciona una implementación de org.json.JSONObject y otras clases relacionadas -->
+            <dependency>
+                <groupId>com.vaadin.external.google</groupId>
+                <artifactId>android-json</artifactId>
+                <version>0.0.20131108.vaadin1</version>
+            </dependency>
+
+            <!-- Dependencia para manipular archivos PDF -->
+            <!-- PDFBox permite leer, escribir y modificar archivos PDF -->
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>2.0.28</version>
+            </dependency>
+
+            <!-- Dependencia para generar archivos PDF -->
+            <!-- iTextPDF es una librería potente para la creación y manipulación de documentos PDF -->
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>5.5.13.4</version>
+            </dependency>
+
+            <!-- Dependencia de Google Guava -->
+            <!-- Proporciona utilidades avanzadas para colecciones, concurrencia, cadenas, etc. -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>33.4.0-jre</version>
+            </dependency>
+
+            <!-- Dependencia para trabajar con JSON en Java -->
+            <!-- Gson permite convertir objetos Java a JSON y viceversa -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.10.1</version>
+            </dependency>
+
     </dependencies>
 
     <build>

@@ -4,16 +4,17 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-import org.springframework.data.relational.core.mapping.Table;
 
-@NamedQuery(
-        name = "User.findByEmail",
-        query = "SELECT u FROM User u WHERE u.email = :email"
-)
+@NamedQueries({
+        @NamedQuery(
+                name = "User.findByEmail",
+                query = "SELECT u FROM User u WHERE u.email = :email"
+        )
+})
 @Data
 @Entity
-@DynamicUpdate
-@DynamicInsert
+@DynamicUpdate // Habilita la actualization dinamica
+@DynamicInsert // Habilita la insercion dinamica
 @Table ( name= "users" )
 public class User {
 
