@@ -77,6 +77,7 @@ public class UserServiceImpl implements UserService {
     public ResponseEntity<String> login(Map<String, String> requestMap) {
         log.info("Login interno de un usuario {}", requestMap);
         try {
+            // Verifica si los campos email y password están presentes
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             requestMap.get("email"),
@@ -85,6 +86,7 @@ public class UserServiceImpl implements UserService {
             );
 
             if (authentication.isAuthenticated()) {
+                // Si la autenticación es exitosa, se obtiene el usuario autenticado
                 if (customDetailsService.getUserDetails().getStatus().equals("true")) {
                     String token = jwtUtil.generateToken(
                             customDetailsService.getUserDetails().getEmail(),
