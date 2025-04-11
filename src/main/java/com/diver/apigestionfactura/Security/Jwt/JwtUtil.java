@@ -1,4 +1,4 @@
-package com.diver.apigestionfactura.jwt;
+package com.diver.apigestionfactura.Security.Jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
