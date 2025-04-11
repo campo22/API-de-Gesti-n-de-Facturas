@@ -3,6 +3,7 @@ package com.diver.apigestionfactura.rest;
 import com.diver.apigestionfactura.constantes.FacturaConstante;
 import com.diver.apigestionfactura.service.UserService;
 import com.diver.apigestionfactura.util.FacturaUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,12 +14,10 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController {
 
-    private final UserService userService;
+    @Autowired
+    private  UserService userService;
 
-    // ✅ Inyección de dependencias correcta mediante constructor
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
+
 
     @PostMapping("/registrar")
     public ResponseEntity<String> registrarUsuario(@RequestBody Map<String, String> requestMap) {
