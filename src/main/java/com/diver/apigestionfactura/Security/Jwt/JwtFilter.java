@@ -45,7 +45,7 @@ public class JwtFilter extends OncePerRequestFilter {
             FilterChain filterChain) throws ServletException, IOException {
 
         // Si la ruta es pública (login, recuperar contraseña o registro), se permite el paso sin validar token
-        if (request.getServletPath().matches("/user/login|/user/forgotPassword|/user/signup")) {
+        if (request.getServletPath().matches("/user/login|/user/forgotPassword|/user/registrar")) {
             filterChain.doFilter(request, response);
         } else {
             // Se intenta obtener el header Authorization que contiene el token
